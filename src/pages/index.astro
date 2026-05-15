@@ -6,60 +6,45 @@ import PageSEO from "@/components/PageSEO.astro";
 import AboutMe from "@/components/landing/AboutMe.astro";
 import ExperiencesSection from "@/components/landing/ExperiencesSection.astro";
 import ProjectsSection from "@/components/landing/ProjectsSection.astro";
-import Divider from "@/components/landing/Divider.astro";
 import VolunteerSection from "@/components/landing/VolunteerSection.astro";
+import CourseworkSection from "@/components/landing/CourseworkSection.astro";
 
 const headingStyle = 
-    "decoration-accent mb-4 text-4xl font-bold underline";
+    "text-sm font-bold uppercase tracking-[0.12em] text-primary mb-6";
 ---
 
 <BaseLayout>
      <PageSEO slot="head" title="Peter Tran" />
 
-     <main class="mx-auto max-w-screen-2xl px-1 lg:px-16">
+     <main class="mx-auto max-w-5xl px-5 sm:px-6">
 
-            <div class="mt-10 lg:mt-18 mb-2 lg:flex lg:flex-row lg:gap-16 xl:gap-16 lg:items-center lg:justify-center">
-                <div class="lg:flex-1">
+            <div class="mt-16 lg:mt-24 mb-2 flex flex-row items-center gap-6 sm:gap-10">
+                <!-- Profile picture — small, subtle -->
+                <div class="box-content flex size-16 sm:size-20 flex-none">
+                    <ProfilePicture />
+                </div>
 
-                    <div class="p-8 font-sans flex flex-row items-center justify-center gap-4 sm:gap-8 md:gap-16 lg:flex-col lg:items-center lg:gap-4 lg:p-8">
-                        <div class="lg:mb-0">
-                            <div class="text-xl font-semibold">Hey, I'm</div>
-                            <div class="mt-2 text-6xl drop-shadow-md font-semibold lg:text-6xl"
-                                >
-                                Peter Tran<span class="text-accent">.</span>
-                        </div> 
-                            <div class="mt-8 not-only-of-type:flex flex-row justify-between drop-shadow-sm">
-                                <ContactIcons />
-                            </div>
-                        </div>
-                    <!-- Right: pfp on mobile -->
-                    <div class="box-content flex size-30 sm:size-40 md:size-50 lg:hidden">
-                        <ProfilePicture />  
+                <div class="font-sans flex-1">
+                    <p class="text-xs uppercase tracking-[0.15em] text-secondary mb-2 font-medium">Portfolio</p>
+                    <h1 class="text-4xl sm:text-5xl font-medium text-primary">Peter Tran</h1>
+                    <div class="mt-4">
+                        <ContactIcons />
                     </div>
                 </div>
-                </div>
-                <!-- Profile pfp on desktop -->
-                <div class="hidden lg:flex lg:flex-none lg:items-center">
-                    <div class="box-content flex size-auto max-w-48 min-w-30">
-                        <ProfilePicture />
-                    </div>
-                </div>
+
                 <!-- About Me on desktop -->
-                <div class="hidden lg:flex lg:flex-1 lg:items-center">
-                    <AboutMe {headingStyle} />
+                <div class="hidden lg:flex lg:items-center lg:ml-auto">
+                    <AboutMe />
                 </div>
             </div>
+
             <!-- About Me on mobile -->
-            <div class="lg:hidden">
-                <AboutMe {headingStyle} />
+            <div class="lg:hidden mt-8">
+                <AboutMe />
             </div>
      </main>
     <ExperiencesSection {headingStyle}/>
     <ProjectsSection {headingStyle}/>
-    <Divider/>
     <VolunteerSection {headingStyle}/>
-    <Divider/>
-    <div class="p-8 pt-8 mx-auto max-w-screen-2xl sm:px-8">
-        <h2>More Coming Soon!</h2>
-    </div>
+    <CourseworkSection {headingStyle}/>
 </BaseLayout>

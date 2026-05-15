@@ -30,15 +30,15 @@ const entries: ContactIconEntry[] = [
 ];
 ---
 
-<div class="flex flex-row items-center gap-3">
+<div class="flex flex-row items-center gap-4">
     {
         entries.map((entry) => (
             <a
-                href={entry.url},
-                title={entry.title},
-                class="size-8 transition-opacity duration-200 hover:opacity-80"
+                href={entry.url}
+                title={entry.title}
+                class="size-6 text-secondary transition-colors duration-200 hover:text-accent"
             >
-                <Icon name={entry.icon} desc={entry.alt} class="size-8" />
+                <Icon name={entry.icon} desc={entry.alt} class="size-6" />
             </a>
         ))
     }
