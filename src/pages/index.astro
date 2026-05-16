@@ -8,26 +8,28 @@ import ExperiencesSection from "@/components/landing/ExperiencesSection.astro";
 import ProjectsSection from "@/components/landing/ProjectsSection.astro";
 import VolunteerSection from "@/components/landing/VolunteerSection.astro";
 import CourseworkSection from "@/components/landing/CourseworkSection.astro";
+import CertificatesSection from "@/components/landing/CertificatesSection.astro";
+import SkillsSection from "@/components/landing/SkillsSection.astro";
 
 const headingStyle = 
-    "text-sm font-bold uppercase tracking-[0.12em] text-primary mb-6";
+    "text-xl font-bold uppercase tracking-[0.12em] text-primary mb-6";
 ---
 
 <BaseLayout>
      <PageSEO slot="head" title="Peter Tran" />
 
-     <main class="mx-auto max-w-5xl px-5 sm:px-6">
+     <main class="mx-auto max-w-4xl px-5 sm:px-6">
 
-            <div class="mt-16 lg:mt-24 mb-2 flex flex-row items-center gap-6 sm:gap-10">
-                <!-- Profile picture — small, subtle -->
-                <div class="box-content flex size-16 sm:size-20 flex-none">
+            <div class="mt-10 lg:mt-14 mb-2 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12">
+                <!-- Profile picture -->
+                <div class="box-content flex size-28 sm:size-32 flex-none">
                     <ProfilePicture />
                 </div>
 
-                <div class="font-sans flex-1">
+                <div class="font-sans flex-1 text-center sm:text-left">
                     <p class="text-xs uppercase tracking-[0.15em] text-secondary mb-2 font-medium">Portfolio</p>
-                    <h1 class="text-4xl sm:text-5xl font-medium text-primary">Peter Tran</h1>
-                    <div class="mt-4">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium text-primary">Peter Tran</h1>
+                    <div class="mt-5 flex justify-center sm:justify-start">
                         <ContactIcons />
                     </div>
                 </div>
@@ -47,4 +49,6 @@ const headingStyle =
     <ProjectsSection {headingStyle}/>
     <VolunteerSection {headingStyle}/>
     <CourseworkSection {headingStyle}/>
+    <CertificatesSection {headingStyle}/>
+    <SkillsSection {headingStyle}/>
 </BaseLayout>

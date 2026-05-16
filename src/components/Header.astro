@@ -2,22 +2,20 @@
 import { Icon } from "astro-icon/components";
 
 const moreItems = [
-    { name: "Experience", path: "/#experience" },
-    { name: "Projects",   path: "/#projects" },
-    { name: "Volunteer",  path: "/#volunteer" },
-    { name: "Coursework", path: "/#coursework" },
+    { name: "Experience",    path: "/#experience" },
+    { name: "Projects",      path: "/#projects" },
+    { name: "Volunteer",     path: "/#volunteer" },
+    { name: "Coursework",    path: "/#coursework" },
+    { name: "Certificates",  path: "/#certificates" },
+    { name: "Skills",        path: "/#skills" },
 ];
 ---
 
-<header class="w-full border-b border-border">
+<header class="w-full">
     <div
-        class="font-sans mx-auto box-content flex h-4 max-w-5xl flex-row items-center justify-between px-5 sm:px-6 py-4"
+        class="font-sans mx-auto box-content flex h-8 max-w-5xl flex-row items-center justify-end px-5 sm:px-10 py-5"
     >
-        <!-- left: wordmark -->
-        <a href="/" class="text-sm font-medium tracking-wide text-primary hover:text-accent transition-colors duration-200">Peter Tran</a>
-
-        <!-- right: nav -->
-        <nav class="text-sm text-secondary">
+        <nav class="text-base text-secondary">
             <!-- Desktop -->
             <menu class="flex flex-row items-center gap-6 max-sm:hidden">
                 <li>
