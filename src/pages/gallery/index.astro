@@ -1,15 +1,21 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageSEO from "@/components/PageSEO.astro";
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 
-const collages = await getCollection("gallery");
+// const collages = await getCollection("gallery");
 ---
 
 <BaseLayout>
     <PageSEO slot="head" title="Gallery — Peter Tran" />
 
     <main class="mx-auto max-w-5xl px-5 sm:px-6 py-16">
+        <p class="text-xs uppercase tracking-[0.15em] text-secondary mb-2 font-medium">Visual</p>
+        <h1 class="text-3xl font-medium text-primary mb-6">Gallery</h1>
+        <p class="text-secondary text-sm">Coming Soon</p>
+    </main>
+
+    {/* <main class="mx-auto max-w-5xl px-5 sm:px-6 py-16">
         <p class="text-xs uppercase tracking-[0.15em] text-secondary mb-2 font-medium">Visual</p>
         <h1 class="text-3xl font-medium text-primary mb-12">Gallery</h1>
 
@@ -51,5 +57,5 @@ const collages = await getCollection("gallery");
                 <code class="font-mono text-xs bg-cellbg px-1 py-0.5 rounded">src/content/gallery/</code> to get started.
             </p>
         )}
-    </main>
+    </main> */}
 </BaseLayout>
